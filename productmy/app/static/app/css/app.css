@@ -1,0 +1,22 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin: 15px;
+    
+}
+td, th{
+    padding: 5px;
+    border: 1px solid;
+    color: rgb(72, 39, 39);
+}
+header{
+    font-size: 30px;
+    font-style: italic;
+    margin: 15 px;
+    color: rgb(242, 87, 87);
+}
+img {
+    max-width: 50px;
+    max-height: 50px;
+}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'app/css/app.css' %}">
+{% endblock %}
+{% block header %}
+<header>Список товаров</header>
+{% endblock %}
+
+{% block main %}
+<img src="{% static 'img/prod.jpg' %}" />
+<table>
+    <div>
+        <a href="users/register">Регистарция</a>
+        <a href="users/login">Вход</a>
+    </div>
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>PRICE</td>
+        <td>DESCRIPTION</td>
+        <td>CREATED</td>
+        <td>UPDATED</td>
+    </tr>
+{% for product in products %}
+    <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.created }}</td>
+        <td>{{ product.updated }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
